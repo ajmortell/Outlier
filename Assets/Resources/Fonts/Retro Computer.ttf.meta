@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 614d28a333d4cd14f8a8e36d2967ae2e
+timeCreated: 1517714092
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Petyka - Retro Computer___SHORT
+  fontNames:
+  - Petyka - Retro Computer___SHORT
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
