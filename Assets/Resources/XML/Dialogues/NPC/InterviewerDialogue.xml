@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CherrylKathyDialogue xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
+    <!-- Start Node ========================================================================== -->
+    <NPCNode>
+      <NPCNodeId>0</NPCNodeId>
+      <NPCName>Cherryl Kathy</NPCName>
+      
+      <DialogueNodes>
+        
+        <DialogueNode>
+          <DialogueNodeID>0</DialogueNodeID>
+          <DialogueText>Hi thank you for coming in [PREFIX_TITLE] [PLAYER_LASTNAME] correct? Your resume has been selected for the interview process.</DialogueText>               
+          <Options>          
+            <DialogueOption>
+              <OptionText>Great!</OptionText>
+              <DestinationNodeID>1</DestinationNodeID>
+            </DialogueOption>           
+          </Options>
+        </DialogueNode>
+
+        <DialogueNode>
+          <DialogueNodeID>1</DialogueNodeID>
+          <DialogueText>OK! Well lets get started shall we? My name is [NPC_NAME]. I will be conducting your interview. Oh I see here you attended [UNIVERSITY_]</DialogueText>
+         
+          <Options>
+            
+            <DialogueOption>
+              <OptionText>My name is [PLAYER_NAME]. Nice to meet you [NPC_NAME].</OptionText>
+              <DestinationNodeID>2</DestinationNodeID>
+            </DialogueOption>   
+            
+          </Options>
+        </DialogueNode>
+
+        <DialogueNode>
+          <DialogueNodeID>2</DialogueNodeID>
+          <DialogueText>OK! Just fill out this paperwork.</DialogueText>
+
+          <Options>
+
+            <DialogueOption>
+              <OptionText>Exit</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+            </DialogueOption>
+
+          </Options>
+        </DialogueNode>
+    
+      </DialogueNodes>
+      
+    </NPCNode>
+    <!-- End Node ============================================================================== -->
+
+</CherrylKathyDialogue>
