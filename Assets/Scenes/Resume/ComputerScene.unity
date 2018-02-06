@@ -4013,6 +4013,7 @@ GameObject:
   - component: {fileID: 1746056310}
   - component: {fileID: 1746056312}
   - component: {fileID: 1746056311}
+  - component: {fileID: 1746056313}
   m_Layer: 5
   m_Name: ClockText
   m_TagString: Untagged
@@ -4035,8 +4036,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 764, y: -467}
-  m_SizeDelta: {x: 540, y: 152}
+  m_AnchoredPosition: {x: 742, y: -466.5}
+  m_SizeDelta: {x: 524, y: 201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746056311
 MonoBehaviour:
@@ -4059,12 +4060,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: a0b3503e7aa0a6f4d97e3767353cfa08, type: 3}
-    m_FontSize: 150
+    m_FontSize: 176
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 256
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4077,6 +4078,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746056309}
+--- !u!114 &1746056313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1746056309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b013c5eff60334f8f88c71778fc810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751463681
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,7 +4134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1781182771
 RectTransform:
   m_ObjectHideFlags: 0
