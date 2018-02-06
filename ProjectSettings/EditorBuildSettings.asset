@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash/SplashScene.unity
     guid: 7475f8d5da008524bba7b94de82124d0
   - enabled: 1
-    path: Assets/Scenes/Resume/ResumeScene.unity
-    guid: 0d6671c0b73624c4c9ef37b2f85496ef
+    path: Assets/Scenes/Resume/ComputerScene.unity
+    guid: 915973da133d7544a9f232e5743f7d0d
   - enabled: 1
     path: Assets/Scenes/Interview/InterviewScene.unity
     guid: ddd318a3cefae454eb4d680b97b7f0f3
