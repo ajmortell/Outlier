@@ -1,16 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NPC : MonoBehaviour {
+public class NPC : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private string Name;
+    private Image Img;
+    private Sprite AvatarImg;
+    public int Id;
+
+    void Awake()
+    {
+        Name = gameObject.name;
+        Img = gameObject.GetComponent<Image>();
+        AvatarImg = Img.sprite;
+    }
+
+    public Image getImage()
+    {
+        return Img;
+    }
+    public Sprite getAvatarImg()
+    {
+        return AvatarImg;
+    }
+    public string getName()
+    {
+        return Name;
+    }
 }

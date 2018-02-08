@@ -1,144 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<CherrylDialogue xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
+<InterviewerDialogue xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
   <!-- Start Node ========================================================================== -->
-  <NPCNode>
+ 
+  <TreeNodes>
+    <NPCName>Cherryl</NPCName>
     <NPCNodeId>0</NPCNodeId>
-    <NPCName>Cherryl Kathy</NPCName>
+    <TreeNode>
+      <TreeNodeId>0</TreeNodeId>
+      
+      <DialogueNodes>
+        <!-- Node 0 -->
+        <DialogueNode>
+          <DialogueNodeID>0</DialogueNodeID>
+          <DialogueText>Hi thank you for coming in [PREFIX_TITLE] [PLAYER_LASTNAME] correct? Your resume has been selected for the interview process.</DialogueText>
+          <Options>
+            <DialogueOption>
+              <OptionText>Great!</OptionText>
+              <DestinationNodeID>1</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
+          </Options>
+        </DialogueNode>
 
-    <DialogueNodes>
-      <!-- Node 0 -->
-      <DialogueNode>
-        <DialogueNodeID>0</DialogueNodeID>
-        <DialogueText>Hi thank you for coming in [PREFIX_TITLE] [PLAYER_LASTNAME] correct? Your resume has been selected for the interview process.</DialogueText>
-        <Options>
-          <DialogueOption>
-            <OptionText>Great!</OptionText>
-            <DestinationNodeID>1</DestinationNodeID>
-            <Face>1</Face>
-          </DialogueOption>
-        </Options>
-      </DialogueNode>
+        <!-- Node 1 -->
+        <DialogueNode>
+          <DialogueNodeID>1</DialogueNodeID>
+          <DialogueText>OK! Well lets get started shall we? My name is [NPC_NAME]. I will be conducting your interview. Oh I see here you attended [UNIVERSITY_NAME]? Tell me about your experience.</DialogueText>
 
-      <!-- Node 1 -->
-      <DialogueNode>
-        <DialogueNodeID>1</DialogueNodeID>
-        <DialogueText>OK! Well lets get started shall we? My name is [NPC_NAME]. I will be conducting your interview. Oh I see here you attended [UNIVERSITY_NAME]? Tell me about your experience.</DialogueText>
+          <Options>
 
-        <Options>
+            <DialogueOption>
+              <OptionText>Yes it was a rewarding experience that started the course of my life to a new career.</OptionText>
+              <DestinationNodeID>2</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>Yes it was a rewarding experience that started the course of my life to a new career.</OptionText>
-            <DestinationNodeID>2</DestinationNodeID>
-            <Face>1</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>Yes [UNIVERSITY_NAME] was the name of the school.</OptionText>
+              <DestinationNodeID>2</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>Yes [UNIVERSITY_NAME] was the name of the school.</OptionText>
-            <DestinationNodeID>2</DestinationNodeID>
-            <Face>0</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>Yup.</OptionText>
+              <DestinationNodeID>2</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>Yup.</OptionText>
-            <DestinationNodeID>2</DestinationNodeID>
-            <Face>0</Face>
-          </DialogueOption>
+          </Options>
+        </DialogueNode>
 
-        </Options>
-      </DialogueNode>
+        <!-- Node 2 -->
 
-      <!-- Node 2 -->
+        <DialogueNode>
+          <DialogueNodeID>2</DialogueNodeID>
+          <DialogueText>That's wonderful. I think my son is considering that school. I'll ask him tomorrow.</DialogueText>
 
-      <DialogueNode>
-        <DialogueNodeID>2</DialogueNodeID>
-        <DialogueText>That's wonderful. I think my son is considering that school. I'll ask him tomorrow.</DialogueText>
+          <!-- this is a lie that will lead into a tree of lies like a quest. The quest ends when they finally give in. 7 lies in  -->
+          <Options>
 
-        <!-- this is a lie that will lead into a tree of lies like a quest. The quest ends when they finally give in. 7 lies in  -->
-        <Options>
+            <DialogueOption>
+              <OptionText>It's a really good school he will really like.</OptionText>
+              <DestinationNodeID>3</DestinationNodeID>
+              <Face>2</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>It's a really good school he will really like.</OptionText>
-            <DestinationNodeID>3</DestinationNodeID>
-            <Face>2</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>....</OptionText>
+              <DestinationNodeID>3</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>....</OptionText>
-            <DestinationNodeID>3</DestinationNodeID>
-            <Face>0</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>Absolutely.</OptionText>
+              <DestinationNodeID>3</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>Absolutely.</OptionText>
-            <DestinationNodeID>3</DestinationNodeID>
-            <Face>1</Face>
-          </DialogueOption>
+          </Options>
+        </DialogueNode>
 
-        </Options>
-      </DialogueNode>
+        <!-- Node 3 -->
 
-      <!-- Node 3 -->
+        <DialogueNode>
+          <DialogueNodeID>3</DialogueNodeID>
+          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
 
-      <DialogueNode>
-        <DialogueNodeID>3</DialogueNodeID>
-        <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
+          <Options>
 
-        <Options>
+            <DialogueOption>
+              <OptionText>I won an for [AWARD_A] when I was at [COMPANY_A] for doing my best.</OptionText>
+              <DestinationNodeID>4</DestinationNodeID>
+              <Face>2</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>I won an for [AWARD_A] when I was at [COMPANY_A] for doing my best.</OptionText>
-            <DestinationNodeID>4</DestinationNodeID>
-            <Face>2</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>That award was for optimizing company overhead while stacking margins through the roof.</OptionText>
+              <DestinationNodeID>4</DestinationNodeID>
+              <Face>3</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>That award was for optimizing company overhead while stacking margins through the roof.</OptionText>
-            <DestinationNodeID>4</DestinationNodeID>
-            <Face>3</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>[AWARD_A] yeah that was my favorite award.</OptionText>
+              <DestinationNodeID>4</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>[AWARD_A] yeah that was my favorite award.</OptionText>
-            <DestinationNodeID>4</DestinationNodeID>
-            <Face>0</Face>
-          </DialogueOption>
+          </Options>
+        </DialogueNode>
 
-        </Options>
-      </DialogueNode>
+        <!-- Node 4 -->
 
-      <!-- Node 4 -->
+        <DialogueNode>
+          <DialogueNodeID>4</DialogueNodeID>
+          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
 
-      <DialogueNode>
-        <DialogueNodeID>4</DialogueNodeID>
-        <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
+          <Options>
 
-        <Options>
+            <DialogueOption>
+              <OptionText>I won this.</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>I won this.</OptionText>
-            <DestinationNodeID>-1</DestinationNodeID>
-            <Face>0</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>....</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>....</OptionText>
-            <DestinationNodeID>-1</DestinationNodeID>
-            <Face>0</Face>
-          </DialogueOption>
+            <DialogueOption>
+              <OptionText>....</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
 
-          <DialogueOption>
-            <OptionText>....</OptionText>
-            <DestinationNodeID>-1</DestinationNodeID>
-            <Face>0</Face>
-          </DialogueOption>
+          </Options>
+        </DialogueNode>
 
-        </Options>
-      </DialogueNode>
+      </DialogueNodes>
 
-    </DialogueNodes>
+    </TreeNode>
+    <!-- End Cherryl Node ============================================================================== -->
 
-  </NPCNode>
-  <!-- End Node ============================================================================== -->
-
-</CherrylDialogue>
+  </TreeNodes>
+</InterviewerDialogue>
