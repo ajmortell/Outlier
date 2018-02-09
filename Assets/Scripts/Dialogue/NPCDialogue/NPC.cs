@@ -6,28 +6,28 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour
 {
 
-    private string Name;
-    private Image Img;
-    private Sprite AvatarImg;
-    public int Id;
+    //private string Name;
+    //private Image Img;
+    //private Sprite AvatarImg;
+    //public int Id;
 
-    void Awake()
-    {
-        Name = gameObject.name;
-        Img = gameObject.GetComponent<Image>();
-        AvatarImg = Img.sprite;
-    }
+    //void Awake()
+    //{
+    //    Name = gameObject.name;
+    //    Img = gameObject.GetComponent<Image>();
+    //    AvatarImg = Img.sprite;
+    //}
 
-    public Image getImage()
-    {
-        return Img;
-    }
-    public Sprite getAvatarImg()
-    {
-        return AvatarImg;
-    }
-    public string getName()
-    {
-        return Name;
-    }
+    //public Image getImage()
+    //{
+    //    return Img;
+    //}
+    //public Sprite getAvatarImg()
+    //{
+    //    return AvatarImg;
+    //}
+    //public string getName()
+    //{
+    //    return Name;
+    //}
 }

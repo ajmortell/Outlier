@@ -31,35 +31,35 @@ public class NPCDialogue : MonoBehaviour
     // Data
     private Dialogue dialogue;
     public string DialogueDataFilePath;
-    public const string path = "Assets/Resources/Dialogue/dialogues.xml";
+    //public const string path = "Assets/Resources/Dialogue/dialogues.xml";
 
     void Start()
     {
         // Dialogue
-        dialogue = Dialogue.LoadDialogue(path);// loads XML
-        GameObject canvas = GameObject.Find("MainCanvas"); // gets the main canvas reference        
-        dialoguePanel = Instantiate<GameObject>(DialoguePanelPrefab);// instantiates the panel
-        dialoguePanel.transform.SetParent(canvas.transform);// sets the panel to the main canvas. bringToFront used on panel
-        RectTransform dialoguePanelTransform = (RectTransform)dialoguePanel.transform;
-        dialoguePanelTransform.localPosition = new Vector3(0, 0, 0);// set all to center
-        node_text = GameObject.Find("DialogueText"); // this is the NPC talking
-        option_1 = GameObject.Find("option_1Btn");// these are player options + exit
-        option_2 = GameObject.Find("option_2Btn");
-        option_3 = GameObject.Find("option_3Btn");
-        exit = GameObject.Find("nextBtn");
-        exit.GetComponent<Button>().onClick.RemoveAllListeners();
-        exit.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(-1); });
-        //NPC
-        npc = gameObject;// this script is attached to an NPC
-        npcScript = npc.GetComponent<NPC>(); // make sure we have the NPC script access on this npc
-        npcId = npcScript.Id; // NPC ID. which NPC the player is speaking to
-        npcName = npcScript.getName(); // NPC name for Identification and display from npc script
-        // AVATAR
-        avatarImgPanel = GameObject.Find("NPCAvatarPanel");// the image panel for the NPC dialogue Avatar
-        avatarImgPanel.GetComponentInChildren<Image>().sprite = npcScript.getAvatarImg();// take the NPC clicked base image and applies it to the dia av
-        avatarImgPanel.GetComponentInChildren<Image>().rectTransform.sizeDelta = (npcScript.getAvatarImg().textureRect.size);
+        //dialogue = Dialogue.LoadDialogue(path);// loads XML
+        //GameObject canvas = GameObject.Find("MainCanvas"); // gets the main canvas reference        
+        //dialoguePanel = Instantiate<GameObject>(DialoguePanelPrefab);// instantiates the panel
+        //dialoguePanel.transform.SetParent(canvas.transform);// sets the panel to the main canvas. bringToFront used on panel
+        //RectTransform dialoguePanelTransform = (RectTransform)dialoguePanel.transform;
+        //dialoguePanelTransform.localPosition = new Vector3(0, 0, 0);// set all to center
+        //node_text = GameObject.Find("DialogueText"); // this is the NPC talking
+        //option_1 = GameObject.Find("option_1Btn");// these are player options + exit
+        //option_2 = GameObject.Find("option_2Btn");
+        //option_3 = GameObject.Find("option_3Btn");
+        //exit = GameObject.Find("nextBtn");
+        //exit.GetComponent<Button>().onClick.RemoveAllListeners();
+        //exit.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(-1); });
+        ////NPC
+        //npc = gameObject;// this script is attached to an NPC
+        //npcScript = npc.GetComponent<NPC>(); // make sure we have the NPC script access on this npc
+        //npcId = npcScript.Id; // NPC ID. which NPC the player is speaking to
+        //npcName = npcScript.getName(); // NPC name for Identification and display from npc script
+        //// AVATAR
+        //avatarImgPanel = GameObject.Find("NPCAvatarPanel");// the image panel for the NPC dialogue Avatar
+        //avatarImgPanel.GetComponentInChildren<Image>().sprite = npcScript.getAvatarImg();// take the NPC clicked base image and applies it to the dia av
+        //avatarImgPanel.GetComponentInChildren<Image>().rectTransform.sizeDelta = (npcScript.getAvatarImg().textureRect.size);
 
-        dialoguePanel.SetActive(false);
+        //dialoguePanel.SetActive(false);
     }
 
     public void RunDialogue()

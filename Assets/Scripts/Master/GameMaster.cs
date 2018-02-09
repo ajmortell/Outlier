@@ -6,27 +6,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
 
-public class GameMaster : Singleton<GameMaster>
-{
-
-    [HideInInspector]
-    public int hp;
-    [HideInInspector]
-    public int xp;
-    [HideInInspector]
-    public int lvl;
-    [HideInInspector]
-    public string user;
-    [HideInInspector]
-    public string uid;
+public class GameMaster : Singleton<GameMaster> {
 
     //private SoundContainer sound;
-    private enum GameState { NONE = 0, STARTUP = 1, SPLASH = 2, CUT = 3, DAY = 4, NIGHT, HOME, RIDER, DEATH, QUIT };
+    private enum GameState { NONE = 0, STARTUP = 1, SPLASH = 2, CUT = 3, COMPUTER = 4, MEETING = 5, FAIL = 6, QUIT = 7 };
     private GameState gameState;
     private GameState currentGameState;
 
-    public override void Awake()
-    {
+    public override void Awake() {
         base.Awake();
         //sound = GetComponent<SoundContainer>();
         gameState = GameState.NONE;
@@ -57,9 +44,20 @@ public class GameMaster : Singleton<GameMaster>
         StartCoroutine(TransitionScene(2));
     }
 
-    private void Day()
+    private void Computer()
     {
         StartCoroutine(TransitionScene(3));
+        //SoundManager.Instance.PlayMusic(sound.SplashClip_A);
+    }
+
+    private void Meeting() {
+        StartCoroutine(TransitionScene(4));
+        //SoundManager.Instance.PlayMusic(sound.SplashClip_A);
+    }
+
+    private void Fail()
+    {
+        StartCoroutine(TransitionScene(5));
         //SoundManager.Instance.PlayMusic(sound.SplashClip_A);
     }
 
@@ -82,32 +80,23 @@ public class GameMaster : Singleton<GameMaster>
         SceneManager.LoadScene(scene);
     }
 
-    private void GameStateChanged()
-    {
-        switch (gameState)
-        {
+    private void GameStateChanged() {
+        switch (gameState) {
             case GameState.STARTUP:
-                //StartUp();
                 break;
             case GameState.SPLASH:
                 break;
             case GameState.CUT:
                 Cut();
                 break;
-            case GameState.DAY:
-                Day();
+            case GameState.COMPUTER:
+                Computer();
                 break;
-            case GameState.NIGHT:
-                //Night();
+            case GameState.MEETING:
+                Meeting();
                 break;
-            case GameState.HOME:
-                //Home();
-                break;
-            case GameState.RIDER:
-                //Rider();
-                break;
-            case GameState.DEATH:
-                //Death();
+            case GameState.FAIL:
+                Fail();
                 break;
             case GameState.QUIT:
                 Quit();
@@ -129,21 +118,15 @@ public class GameMaster : Singleton<GameMaster>
                 gameState = GameState.CUT;
                 break;
             case 3:
-                gameState = GameState.DAY;
+                gameState = GameState.COMPUTER;
                 break;
             case 4:
-                gameState = GameState.NIGHT;
+                gameState = GameState.MEETING;
                 break;
             case 5:
-                gameState = GameState.HOME;
+                gameState = GameState.FAIL;
                 break;
             case 6:
-                gameState = GameState.RIDER;
-                break;
-            case 7:
-                gameState = GameState.DEATH;
-                break;
-            case 8:
                 gameState = GameState.QUIT;
                 break;
         }
@@ -191,19 +174,21 @@ public class GameMaster : Singleton<GameMaster>
         }
     }
 
-    public void QuitGame()
-    {
+    public void QuitGame() {
         gameState = GameState.QUIT;
     }
 
-    void OnGUI()
-    {
+    public void CloseResume() {
+        gameState = GameState.MEETING;
+    }
+
+
+    void OnGUI() {
         //GUI.Label(new Rect(320, 10, 150, 30), "Name: " + SoundManager.Instance._musicSource.volume);
         //GUI.Label(new Rect(100, 10, 150, 30), "FX Vol: " + SoundManager.Instance._fxSource.volume);
     }
 
-    void Update()
-    {
+    void Update() {
         CheckState();
     }
 

@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6336714, g: 0.38235295, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -439,7 +439,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'A: Lorum ipsum lorum ipsum lorum. Ipsum lorum ipsum lorum ipsum lorum ipsum?
-    Lorum ipsum lorum ipsum.'
+    Lorum ipsum lorum ipsum. Lorum ipsum. Lorum.'
 --- !u!222 &366471859
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6336714, g: 0.38235295, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -999,7 +999,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'B: Lorum ipsum lorum ipsum lorum. Ipsum lorum ipsum lorum ipsum lorum ipsum?
-    Lorum ipsum lorum ipsum.'
+    Lorum ipsum lorum ipsum. Lorum ipsum. Lorum.'
 --- !u!222 &1611845501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6336714, g: 0.38235295, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1438,7 +1438,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'C: Lorum ipsum lorum ipsum lorum. Ipsum lorum ipsum lorum ipsum lorum ipsum?
-    Lorum ipsum lorum ipsum.'
+    Lorum ipsum lorum ipsum. Lorum ipsum. Lorum.'
 --- !u!222 &2136717599
 CanvasRenderer:
   m_ObjectHideFlags: 0

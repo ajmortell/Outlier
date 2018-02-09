@@ -8,6 +8,6 @@ public class StartGame : MonoBehaviour {
     public void OnButtonPress()
     {
         GameMaster.Instance.Load();
-        GameMaster.Instance.ChangeState(2);
+        GameMaster.Instance.ChangeState(3);
     }
 }
