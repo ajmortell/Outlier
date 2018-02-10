@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 // text allows 200 characters safely
 
-public class ModalPanel : Singleton<ModalPanel>
-{
+public class ModalPanel : Singleton<ModalPanel> {
 
     private UnityAction YesBtnAction;
     private UnityAction NoBtnAction;
@@ -176,40 +175,5 @@ public class ModalPanel : Singleton<ModalPanel>
         modalBtn_B.GetComponentInChildren<Text>().text = btn_txt;
     }
 
-    // BUTTON ACTIONS
-    void OnYesBtn()
-    {
-        Debug.Log("YES BUTTON PRESSED");
-        Refresh();
-    }
-    void OnNoBtn()
-    {
-        Debug.Log("NO BUTTON PRESSED");
-        Refresh();
-    }
-    void OnSaveBtn()
-    {
-        Debug.Log("SAVE BUTTON PRESSED");
-        GameMaster.Instance.Save();
-        Refresh();
-    }
-    void OnCancelBtn()
-    {
-        Debug.Log("CANCEL BUTTON PRESSED");
-        Refresh();
-    }
-    void OnOkBtn()
-    {
-        Debug.Log("OK BUTTON PRESSED");
-        Refresh();
-    }
-    void OnNextBtn()
-    {
-        Debug.Log("NEXT BUTTON PRESSED");
-    }
-    void OnSkipBtn()
-    {
-        Debug.Log("SKIP BUTTON PRESSED");
-    }
 }
 

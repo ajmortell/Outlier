@@ -4,18 +4,17 @@ using System.Collections.Generic;
 
 namespace DialogueTree {
 
-    public class NPCNode {
+    public class CherrylBranchNode {
 
-        public int NPCNodeId;// user input on npc determins this. NPCs have IDs as well to pass
-        public string NPCName;// NPC name is determined by the name of the GameObject. Could be used to further id.
+        public int CherrylNodeId;
+        public string NPCName;
         public List<DialogueNode> DialogueNodes;
 
-        public NPCNode() {
+        public CherrylBranchNode() {
             DialogueNodes = new List<DialogueNode>();
         }
 
-        public NPCNode(string name) {
-
+        public CherrylBranchNode(string name) {
             NPCName = name;
             DialogueNodes = new List<DialogueNode>();
         }

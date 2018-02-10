@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<InterviewerDialogue xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
-  <!-- Start Node ========================================================================== -->
- 
-  <TreeNodes>
-    <NPCName>Cherryl</NPCName>
-    <NPCNodeId>0</NPCNodeId>
-    <TreeNode>
-      <TreeNodeId>0</TreeNodeId>
-      
+<CherrylDialogueTree xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
+  
+  <CherrylBranchNodes> <!--<NPCNodes>-->
+    <NodeTracker> 0 </NodeTracker> <!--<NPCNodes>-->
+    <LieTracker> 0 </LieTracker> <!--<WherNodes>-->
+    
+    <CherrylBranchNode> <!--<NPCNode>-->
+      <CherrylBranchNodeId>0</CherrylBranchNodeId>
+
       <DialogueNodes>
         <!-- Node 0 -->
         <DialogueNode>
           <DialogueNodeID>0</DialogueNodeID>
-          <DialogueText>Hi thank you for coming in [PREFIX_TITLE] [PLAYER_LASTNAME] correct? Your resume has been selected for the interview process.</DialogueText>
+          <DialogueText>Hi thank you for coming in to Business and Business. You are [PLAYER_LASTNAME] correct? Your resume has been selected for the interview process.</DialogueText>
           <Options>
             <DialogueOption>
               <OptionText>Great!</OptionText>
@@ -141,8 +141,8 @@
 
       </DialogueNodes>
 
-    </TreeNode>
+    </CherrylBranchNode>
     <!-- End Cherryl Node ============================================================================== -->
 
-  </TreeNodes>
-</InterviewerDialogue>
+  </CherrylBranchNodes>
+</CherrylDialogueTree>

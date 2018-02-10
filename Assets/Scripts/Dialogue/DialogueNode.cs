@@ -2,11 +2,9 @@
 using System.Xml.Serialization;
 using System.Collections.Generic;
 
-namespace DialogueTree
-{
+namespace DialogueTree {
 
-    public class DialogueNode
-    {
+    public class DialogueNode {
 
         public int DialogueNodeID = -1;
         public string DialogueText;
