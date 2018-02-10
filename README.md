@@ -1,2 +1,2 @@
 # Outlier
-I really super cool game.
+A really super cool game.
