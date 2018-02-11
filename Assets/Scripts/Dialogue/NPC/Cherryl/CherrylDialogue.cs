@@ -37,7 +37,6 @@ public class CherrylDialogue : MonoBehaviour {
         dialoguePanel = Instantiate<GameObject>(DialoguePanelPrefab);// instantiates the panel
         dialoguePanel.transform.SetParent(canvas.transform);// sets the panel to the main canvas. bringToFront used on panel
         RectTransform dialoguePanelTransform = (RectTransform)dialoguePanel.transform;
-        //dialoguePanelTransform.localPosition = new Vector3(0, 0, 0);// set all to center
         node_text = GameObject.Find("DialogueText"); // this is the NPC talking
         option_1 = GameObject.Find("dialougueOptionA");// these are player options + exit
         option_2 = GameObject.Find("dialougueOptionB");
@@ -47,17 +46,10 @@ public class CherrylDialogue : MonoBehaviour {
         //exit.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(-1); });
         ////NPC
         npc = gameObject;// this script is attached to an NPC
-        //npcScript = npc.GetComponent<NPC>(); // make sure we have the NPC script access on this npc
-        //npcId = npcScript.Id; // NPC ID. which NPC the player is speaking to
-        //npcName = npcScript.getName(); // NPC name for Identification and display from npc script
-        //// AVATAR
-        //avatarImgPanel = GameObject.Find("NPCAvatarPanel");// the image panel for the NPC dialogue Avatar
-        //avatarImgPanel.GetComponentInChildren<Image>().sprite = npcScript.getAvatarImg();// take the NPC clicked base image and applies it to the dia av
-        //avatarImgPanel.GetComponentInChildren<Image>().rectTransform.sizeDelta = (npcScript.getAvatarImg().textureRect.size);
         npcName = "Cherryl";
         branchID = 0;
         dialoguePanel.SetActive(false);
-        RunDialogue();
+        RunDialogue();// THIS IS ONLY HERE FOR TEST IT IS WHAT INITIATES THE DIALOGUE. CAN BE CALLED FROM CLASS OBJECT ELSEWHERE
     }
 
     public void RunDialogue() {
