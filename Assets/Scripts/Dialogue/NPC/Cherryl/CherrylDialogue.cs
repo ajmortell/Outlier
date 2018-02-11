@@ -9,10 +9,8 @@ public class CherrylDialogue : MonoBehaviour {
 
     // NPC
     private GameObject npc;
-    //private NPC npcScript;
     private string npcName;
     private int branchID;
-
     private int selected_npc = -2;
     // Dialogue
     private GameObject node_text;
@@ -20,7 +18,7 @@ public class CherrylDialogue : MonoBehaviour {
     private GameObject option_2;
     private GameObject option_3;
     private GameObject exit;
-    private int selected_dialogue_node = -2;
+
     private int selected_option = -2;
     private int dialogueDestinationNode = 0;
     private GameObject dialoguePanel;
@@ -80,7 +78,7 @@ public class CherrylDialogue : MonoBehaviour {
     private void Display_Node(DialogueNode node) {
 
         node_text.GetComponent<Text>().text = node.DialogueText;
-        string newString = node_text.GetComponent<Text>().text.Replace("[NPC_NAME]", npcName).Replace("[PLAYER_NAME]", "Adam Mortell");
+        string newString = node_text.GetComponent<Text>().text.Replace("[NPC_NAME]", npcName).Replace("[PLAYER_FIRSTNAME]", "Adam").Replace("[PLAYER_LASTNAME]", "Mortell").Replace("[UNIVERSITY_NAME]", "STFU");
         node_text.GetComponent<Text>().text = newString;
 
         option_1.SetActive(false);

@@ -20,10 +20,10 @@
         <!-- Node 0 -->
         <DialogueNode>
           <DialogueNodeID>0</DialogueNodeID>
-          <DialogueText>Hi thank you for coming in to Business and Business. You are [PLAYER_LASTNAME] correct? Your resume has been selected for the interview process.</DialogueText>
+          <DialogueText>Hi thank you for coming in to Business and Business. You're last name is... [PLAYER_LASTNAME] correct? [PLAYER_FIRSTNAME] [PLAYER_LASTNAME]?</DialogueText>
           <Options>
             <DialogueOption>
-              <OptionText>Great!</OptionText>
+              <OptionText>Yes.</OptionText>
               <DestinationNodeID>1</DestinationNodeID>
               <Face>1</Face>
             </DialogueOption>
@@ -33,26 +33,14 @@
         <!-- Node 1 -->
         <DialogueNode>
           <DialogueNodeID>1</DialogueNodeID>
-          <DialogueText>OK! Well lets get started shall we? My name is [NPC_NAME]. I will be conducting your interview. Oh I see here you attended [UNIVERSITY_NAME]? Tell me about your experience.</DialogueText>
+          <DialogueText>Do you have proper I.D.? I need to make a photocopy for records.</DialogueText>
 
           <Options>
 
             <DialogueOption>
-              <OptionText>Yes it was a rewarding experience that started the course of my life to a new career.</OptionText>
+              <OptionText>The funniest thing. This is going to sound crazy but on my way in here a man stole my wallet and I need a new license..</OptionText>
               <DestinationNodeID>2</DestinationNodeID>
               <Face>1</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>Yes [UNIVERSITY_NAME] was the name of the school.</OptionText>
-              <DestinationNodeID>2</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>Yup.</OptionText>
-              <DestinationNodeID>2</DestinationNodeID>
-              <Face>0</Face>
             </DialogueOption>
 
           </Options>
@@ -62,25 +50,25 @@
 
         <DialogueNode>
           <DialogueNodeID>2</DialogueNodeID>
-          <DialogueText>That's wonderful. I think my son is considering that school. I'll ask him tomorrow.</DialogueText>
+          <DialogueText>This is highly unorthodox [PLAYER_FIRSTNAME]. We will need you to get the license for us.</DialogueText>
 
           <!-- this is a lie that will lead into a tree of lies like a quest. The quest ends when they finally give in. 7 lies in  -->
           <Options>
 
             <DialogueOption>
-              <OptionText>It's a really good school he will really like.</OptionText>
+              <OptionText>Will do [NPC_NAME].</OptionText>
               <DestinationNodeID>3</DestinationNodeID>
               <Face>2</Face>
             </DialogueOption>
 
             <DialogueOption>
-              <OptionText>....</OptionText>
+              <OptionText>Their chess program is superb.</OptionText>
               <DestinationNodeID>3</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
 
             <DialogueOption>
-              <OptionText>Absolutely.</OptionText>
+              <OptionText>Absolutely tell him about their .</OptionText>
               <DestinationNodeID>3</DestinationNodeID>
               <Face>1</Face>
             </DialogueOption>
@@ -92,26 +80,14 @@
 
         <DialogueNode>
           <DialogueNodeID>3</DialogueNodeID>
-          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
+          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. You recieved three awards?</DialogueText>
 
           <Options>
-
+<!-- A LIE tag means the player will fill it in based on cost of lie. to lie using thes words costs points. there will be a menu. the menu is filled with wwords and or phrases. they will be learned through conversation and other means maybe watching tv or something. Surfing internet. etc.-->
             <DialogueOption>
-              <OptionText>I won an for [AWARD_A] when I was at [COMPANY_A] for doing my best.</OptionText>
+              <OptionText>Yes</OptionText>
               <DestinationNodeID>4</DestinationNodeID>
               <Face>2</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>That award was for optimizing company overhead while stacking margins through the roof.</OptionText>
-              <DestinationNodeID>4</DestinationNodeID>
-              <Face>3</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>[AWARD_A] yeah that was my favorite award.</OptionText>
-              <DestinationNodeID>4</DestinationNodeID>
-              <Face>0</Face>
             </DialogueOption>
 
           </Options>
