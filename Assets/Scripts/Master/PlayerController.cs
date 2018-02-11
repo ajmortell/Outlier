@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerController : Singleton<PlayerController> 
 {
-	public string playerName;
+	public string playerFirst;
+	public string playerLast;
+	public string profile;
 	public string contactPhone;
 	public string contactEmail;
 	public string eduLevel;
-	public string eduName;
+	public string eduHName;
+	public string eduUName;
 	public string eduStudy;
 	public string work1Name;
 	public string work2Name;
@@ -17,13 +20,33 @@ public class PlayerController : Singleton<PlayerController>
 	public string work2Pos;
 	public string work3Pos;
 	
-	public void resumeUpdate (string pname, string phone, string email,string eduLevel, string eduN,string eduStudy, string w1n, string w2n, string w3n,string w1p,string w2p,string w3p)
+	public void resumeUpdate 
+	(
+	string pfirst,
+	string plast,
+	string profile,
+	string phone, 
+	string email,
+	string eduLevel,
+	string eduHN,
+	string eduUN,
+	string eduStudy, 
+	string w1n, 
+	string w2n, 
+	string w3n,
+	string w1p,
+	string w2p,
+	string w3p
+	)
 	{
-		updatePlayerName(pname);
+		updatePlayerFirst(pfirst);
+		updatePlayerLast(plast);
+		updateProfile(profile);
 		updatePhoneName(phone);
 		updateEmailName(email);
 		updateEduLevel(eduLevel);
-		updateEduName(eduN);
+		updateEduHName(eduHN);
+		updateEduUName(eduUN);
 		updateEduStudy(eduStudy);
 		updateWorkName1(w1n);
 		updateWorkName2(w2n);
@@ -35,9 +58,17 @@ public class PlayerController : Singleton<PlayerController>
 	}
 	
 	//setters for chaning vars
-	void updatePlayerName(string newName)
+	void updatePlayerFirst(string newName)
 	{
-		playerName = newName;
+		playerFirst = newName;
+	}
+	void updatePlayerLast(string newName)
+	{
+		playerLast = newName;
+	}
+	void updateProfile(string newName)
+	{
+		profile = newName;
 	}
 	void updatePhoneName(string newName)
 	{
@@ -51,9 +82,13 @@ public class PlayerController : Singleton<PlayerController>
 	{
 		eduLevel=newName;
 	}
-	void updateEduName(string newName)
+	void updateEduHName(string newName)
 	{
-		eduName=newName;
+		eduHName=newName;
+	}
+		void updateEduUName(string newName)
+	{
+		eduUName=newName;
 	}
 	void updateEduStudy(string newName)
 	{

@@ -9,31 +9,37 @@ using UnityEngine.SceneManagement;
 public class Resume : MonoBehaviour 
 {
 	//declare holder for playercontroller when we grab it
-	PlayerController playercontroller;
+	public PlayerController playercontroller;
 	
 	//Links to input fields on resume screen
-	public InputField IFplayerName;
+	public InputField IFplayerFirst;
+	public InputField IFplayerLast;
+	public UnityEngine.UI.Button BTNprofile;
 	public InputField IFphone;
 	public InputField IFemail;
-	public UnityEngine.UI.Dropdown IFeduLevel;
-	public InputField IFeduName;
-	public UnityEngine.UI.Dropdown IFeduStudy;
+	public UnityEngine.UI.Button BTNeduLevel;
+	public InputField IFeduHName;
+	public InputField IFeduUName;
+	public UnityEngine.UI.Button BTNeduStudy;
 	public InputField IFwrkName1;
 	public InputField IFwrkName2;
 	public InputField IFwrkName3;
-	public UnityEngine.UI.Dropdown IFwrkPos1;
-	public UnityEngine.UI.Dropdown IFwrkPos2;
-	public UnityEngine.UI.Dropdown IFwrkPos3;
+	public UnityEngine.UI.Button BTNwrkPos1;
+	public UnityEngine.UI.Button BTNwrkPos2;
+	public UnityEngine.UI.Button BTNwrkPos3;
 	
 	//placeholder vars
 	//store data from fields in these
 	//then use these to pass info to playercontroller
-	string playerName;
+	string playerFirst;
+	string playerLast;
+	string profile;
 	string phone;
 	string email;
 	string eduLevel;
 	string eduStudy;
-	string eduName;
+	string eduHName;
+	string eduUName;
 	string wrkName1;
 	string wrkName2;
 	string wrkName3;
@@ -50,22 +56,43 @@ public class Resume : MonoBehaviour
 	public void UpdatePlayerData()
 	{
 		//load all the data from the fields into their placeholders
-		playerName = IFplayerName.text;
+		playerFirst = IFplayerFirst.text;
+		playerLast = IFplayerLast.text;
+		profile = BTNprofile.GetComponentInChildren<Text>().text;
 		phone = IFphone.text;
 		email = IFemail.text;
-		eduLevel= IFeduLevel.options[IFeduLevel.value].text;
-		eduName = IFeduName.text;
-		eduStudy = IFeduStudy.options[IFeduStudy.value].text;
+		eduLevel= BTNeduLevel.GetComponentInChildren<Text>().text;
+		eduHName = IFeduHName.text;
+		eduUName = IFeduUName.text;
+		eduStudy = BTNeduLevel.GetComponentInChildren<Text>().text;
 		wrkName1 = IFwrkName1.text;
 		wrkName2 = IFwrkName2.text;
 		wrkName3 = IFwrkName3.text;
-		wrkPos1 = IFwrkPos1.options[IFwrkPos1.value].text;
-		wrkPos2 = IFwrkPos2.options[IFwrkPos2.value].text;
-		wrkPos3 = IFwrkPos3.options[IFwrkPos3.value].text;
-		//pass the data to the playercontroller
-		playercontroller.resumeUpdate(playerName,phone,email,eduLevel,eduName,eduStudy,wrkName1,wrkName2,wrkName3,wrkPos1,wrkPos2,wrkPos3);
+		wrkPos1 = BTNwrkPos1.GetComponentInChildren<Text>().text;
+		wrkPos2 = BTNwrkPos2.GetComponentInChildren<Text>().text;
+		wrkPos3 = BTNwrkPos3.GetComponentInChildren<Text>().text;
 		
-		exitScene();
+		//pass the data to the playercontroller
+		playercontroller.resumeUpdate
+		(
+		playerFirst,
+		playerLast,
+		profile,
+		phone,
+		email,
+		eduLevel,
+		eduHName,
+		eduUName,
+		eduStudy,
+		wrkName1,
+		wrkName2,
+		wrkName3,
+		wrkPos1,
+		wrkPos2,
+		wrkPos3
+		);
+		
+		//exitScene();
 	}
 	
 	void exitScene()
