@@ -8,7 +8,7 @@ namespace DialogueTree {
 
         public string OptionText;
         public int DestinationNodeID;
-
+  
         public DialogueOption() {
         }
 

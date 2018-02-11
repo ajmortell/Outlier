@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <CherrylDialogueTree xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
-  
-  <CherrylBranchNodes> <!--<NPCNodes>-->
-    <NodeTracker> 0 </NodeTracker> <!--<NPCNodes>-->
-    <LieTracker> 0 </LieTracker> <!--<WherNodes>-->
-    
-    <CherrylBranchNode> <!--<NPCNode>-->
+
+  <CherrylBranchNodes>
+    <!--<NPCNodes>-->
+
+    <DialogueTracker>
+      <BranchTracker> 0 </BranchTracker>
+      <!--<NPCNodes>-->
+      <LieTracker> 0 </LieTracker>
+      <!--<WhereNodes>-->
+    </DialogueTracker>
+
+    <CherrylBranchNode>
+      <!--<NPCNode>-->
       <CherrylBranchNodeId>0</CherrylBranchNodeId>
 
       <DialogueNodes>
