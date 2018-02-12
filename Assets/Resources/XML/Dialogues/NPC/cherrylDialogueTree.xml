@@ -3,19 +3,19 @@
 <CherrylDialogueTree xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
 
   <CherrylBranchNodes>
-    <!--<NPCNodes>-->
+    <!--was <NPCNodes>-->
 
     <DialogueTracker>
-      <BranchTracker> 0 </BranchTracker>
-      <!--<NPCNodes>-->
-      <LieTracker> 0 </LieTracker>
-      <!--<WhereNodes>-->
+      <BranchTrackerID> 3 </BranchTrackerID>
+      <LieTrackerID> 2 </LieTrackerID>
     </DialogueTracker>
 
     <CherrylBranchNode>
-      <!--<NPCNode>-->
+      <!--was <NPCNode>-->
+      
       <CherrylBranchNodeId>0</CherrylBranchNodeId>
-
+      <!--was <NPCNodeId>-->
+      
       <DialogueNodes>
         <!-- Node 0 -->
         <DialogueNode>
@@ -83,7 +83,7 @@
           <DialogueText>OK. Moving on. These are some interesting awards you have picked up. You recieved three awards?</DialogueText>
 
           <Options>
-<!-- A LIE tag means the player will fill it in based on cost of lie. to lie using thes words costs points. there will be a menu. the menu is filled with wwords and or phrases. they will be learned through conversation and other means maybe watching tv or something. Surfing internet. etc.-->
+            
             <DialogueOption>
               <OptionText>Yes</OptionText>
               <DestinationNodeID>4</DestinationNodeID>
@@ -103,12 +103,184 @@
 
             <DialogueOption>
               <OptionText>I won this.</OptionText>
+              <DestinationNodeID>5</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>I don't think I have any.</OptionText>
+              <DestinationNodeID>6</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>My weakness is my sweet style.</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+          </Options>
+        </DialogueNode>
+
+        <DialogueNode>
+          <DialogueNodeID>5</DialogueNodeID>
+          <DialogueText>[PLAYER_FIRSTNAME], What is your greatest weakness?</DialogueText>
+
+          <Options>
+
+            <DialogueOption>
+              <OptionText>I don't think I have any.</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>My weakness is my sweet style</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
 
             <DialogueOption>
               <OptionText>....</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+          </Options>
+        </DialogueNode>
+        
+      </DialogueNodes>
+
+    </CherrylBranchNode>
+    
+    
+    <!-- End Cherryl Branch Node 0  ============================================================================= -->
+
+    <CherrylBranchNode>
+
+      <CherrylBranchNodeId>1</CherrylBranchNodeId>
+      <!--was <NPCNodeId>-->
+
+      <DialogueNodes>
+        <!-- Node 0 -->
+        <DialogueNode>
+          <DialogueNodeID>0</DialogueNodeID>
+          <DialogueText>[PLAYER_FIRSTNAME]! How are you?</DialogueText>
+          <Options>
+            <DialogueOption>
+              <OptionText>SUPERB!.</OptionText>
+              <DestinationNodeID>1</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
+          </Options>
+        </DialogueNode>
+
+        <!-- Node 1 -->
+        <DialogueNode>
+          <DialogueNodeID>1</DialogueNodeID>
+          <DialogueText>Do you have proper I.D.? I need to make a photocopy for records.</DialogueText>
+
+          <Options>
+
+            <DialogueOption>
+              <OptionText>The funniest thing. This is going to sound crazy but on my way in here a man stole my wallet and I need a new license..</OptionText>
+              <DestinationNodeID>2</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
+
+          </Options>
+        </DialogueNode>
+
+        <!-- Node 2 -->
+
+        <DialogueNode>
+          <DialogueNodeID>2</DialogueNodeID>
+          <DialogueText>This is highly unorthodox [PLAYER_FIRSTNAME]. We will need you to get the license for us.</DialogueText>
+
+          <!-- this is a lie that will lead into a tree of lies like a quest. The quest ends when they finally give in. 7 lies in  -->
+          <Options>
+
+            <DialogueOption>
+              <OptionText>Will do [NPC_NAME].</OptionText>
+              <DestinationNodeID>3</DestinationNodeID>
+              <Face>2</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>Their chess program is superb.</OptionText>
+              <DestinationNodeID>3</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>Absolutely tell him about their .</OptionText>
+              <DestinationNodeID>3</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
+
+          </Options>
+        </DialogueNode>
+
+        <!-- Node 3 -->
+
+        <DialogueNode>
+          <DialogueNodeID>3</DialogueNodeID>
+          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. You recieved three awards?</DialogueText>
+
+          <Options>
+
+            <DialogueOption>
+              <OptionText>Yes</OptionText>
+              <DestinationNodeID>4</DestinationNodeID>
+              <Face>2</Face>
+            </DialogueOption>
+
+          </Options>
+        </DialogueNode>
+
+        <!-- Node 4 -->
+
+        <DialogueNode>
+          <DialogueNodeID>4</DialogueNodeID>
+          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
+
+          <Options>
+
+            <DialogueOption>
+              <OptionText>I won this.</OptionText>
+              <DestinationNodeID>5</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>I don't think I have any.</OptionText>
+              <DestinationNodeID>6</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>My weakness is my sweet style.</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+          </Options>
+        </DialogueNode>
+
+        <DialogueNode>
+          <DialogueNodeID>5</DialogueNodeID>
+          <DialogueText>[PLAYER_FIRSTNAME], What is your greatest weakness?</DialogueText>
+
+          <Options>
+
+            <DialogueOption>
+              <OptionText>I don't think I have any.</OptionText>
+              <DestinationNodeID>-1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>My weakness is my sweet style</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
@@ -123,9 +295,65 @@
         </DialogueNode>
 
       </DialogueNodes>
-
+      
     </CherrylBranchNode>
-    <!-- End Cherryl Node ============================================================================== -->
 
+    <!-- End Cherryl Branch Node 1  ============================================================================= -->
+    
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+
+    <!-- End Cherryl Branch Node 2  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 3  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 4  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 5  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 6  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 7  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 8  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+
+    <!-- End Cherryl Branch Node 9  ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 10 ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 11 ============================================================================= -->
+
+    <CherrylBranchNode>
+    </CherrylBranchNode>
+    
+    <!-- End Cherryl Branch Node 12 ============================================================================= -->
+    
   </CherrylBranchNodes>
 </CherrylDialogueTree>

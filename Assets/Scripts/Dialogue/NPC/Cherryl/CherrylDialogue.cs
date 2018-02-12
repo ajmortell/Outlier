@@ -24,13 +24,13 @@ public class CherrylDialogue : MonoBehaviour {
     private GameObject dialoguePanel;
     public GameObject DialoguePanelPrefab;
     // Data
-    private CherrylDialogueTree dialogue;
+    private CherrylDialogueTree dialogue_tree;
     public string DialogueDataFilePath;
     public const string path = "Assets/Resources/XML/Dialogues/NPC/cherrylDialogueTree.xml";
 
     void Start() {
         // Dialogue
-        dialogue = CherrylDialogueTree.LoadDialogue(path);// loads XML
+        dialogue_tree = CherrylDialogueTree.LoadDialogue(path);// loads XML
         GameObject canvas = GameObject.Find("MainCanvas"); // gets the main canvas reference        
         dialoguePanel = Instantiate<GameObject>(DialoguePanelPrefab);// instantiates the panel
         dialoguePanel.transform.SetParent(canvas.transform);// sets the panel to the main canvas. bringToFront used on panel
@@ -51,10 +51,13 @@ public class CherrylDialogue : MonoBehaviour {
     }
 
     public void RunDialogue() {
-        StartCoroutine(InitiateBranchNode(dialogue.CherrylBranchNodes[branchID]));
+        StartCoroutine(InitiateBranchNode(dialogue_tree.CherrylBranchNodes[branchID]));
     }
 
     private IEnumerator InitiateBranchNode(CherrylBranchNode node) {
+
+
+       
         dialoguePanel.SetActive(true);
         int node_id = 0;
 

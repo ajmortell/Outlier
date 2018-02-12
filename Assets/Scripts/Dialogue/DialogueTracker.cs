@@ -6,15 +6,15 @@ namespace DialogueTree
 {
     public class DialogueTracker {
 
-        public int BranchTracker;
-        public int LieTracker;
+        public int BranchTrackerID;
+        public int LieTrackerID;
         // Use this for initialization
         public DialogueTracker() {
         }
 
-        public DialogueTracker(int branch, int lie) {
-            BranchTracker = branch;
-            LieTracker = lie;
+        public DialogueTracker(int branchID, int lieID) {
+            BranchTrackerID = branchID;
+            LieTrackerID = lieID;
         }
     }
 }
