@@ -29,7 +29,7 @@ public class CherrylDialogue : MonoBehaviour {
     public const string path = "Assets/Resources/XML/Dialogues/NPC/cherrylDialogueTree.xml";
 
     void Start() {
-        // Dialogue
+
         dialogue_tree = CherrylDialogueTree.LoadDialogue(path);// loads XML
         GameObject canvas = GameObject.Find("MainCanvas"); // gets the main canvas reference        
         dialoguePanel = Instantiate<GameObject>(DialoguePanelPrefab);// instantiates the panel
@@ -39,10 +39,6 @@ public class CherrylDialogue : MonoBehaviour {
         option_1 = GameObject.Find("dialougueOptionA");// these are player options + exit
         option_2 = GameObject.Find("dialougueOptionB");
         option_3 = GameObject.Find("dialougueOptionC");
-        //exit = GameObject.Find("nextBtn");
-        //exit.GetComponent<Button>().onClick.RemoveAllListeners();
-        //exit.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(-1); });
-        ////NPC
         npc = gameObject;// this script is attached to an NPC
         npcName = npc.name;
         branchID = 0;
@@ -81,7 +77,7 @@ public class CherrylDialogue : MonoBehaviour {
 
         
         node_text.GetComponent<Text>().text = node.DialogueText;
-        string newString = node_text.GetComponent<Text>().text.Replace("[NPC_NAME]", npcName).Replace("[PLAYER_FIRSTNAME]", GameMaster.Instance._firstName).Replace("[PLAYER_LASTNAME]", GameMaster.Instance._firstName).Replace("[UNIVERSITY_NAME]", GameMaster.Instance._universityName);
+        string newString = node_text.GetComponent<Text>().text.Replace("[NPC_NAME]", npcName).Replace("[PLAYER_FIRSTNAME]", GameMaster.Instance._firstName).Replace("[PLAYER_LASTNAME]", GameMaster.Instance._lastName).Replace("[UNIVERSITY_NAME]", GameMaster.Instance._universityName);
         node_text.GetComponent<Text>().text = newString;
 
         option_1.SetActive(false);
@@ -106,7 +102,7 @@ public class CherrylDialogue : MonoBehaviour {
     private void Set_Option_Button(GameObject button, DialogueOption option) {
         button.SetActive(true);// sets sent btn ON
         button.GetComponentInChildren<Text>().text = option.OptionText;// fills text with xml option txt
-        string newString = button.GetComponentInChildren<Text>().text.Replace("[PLAYER_NAME]", "Adam Mortell").Replace("[NPC_NAME]", npcName);
+        string newString = button.GetComponentInChildren<Text>().text.Replace("[PLAYER_FIRSTNAME]", "Adam Mortell").Replace("[NPC_NAME]", npcName);
         button.GetComponentInChildren<Text>().text = newString;
 
         button.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(option.DestinationNodeID); });

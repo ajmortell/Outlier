@@ -11,6 +11,7 @@ public class GameMaster : Singleton<GameMaster> {
     // GAME DATA
     public string _firstName;
     public string _lastName;
+    public string _profile;
     public string _phone;
     public string _email;
     public string _eduLevel;
@@ -168,6 +169,7 @@ public class GameMaster : Singleton<GameMaster> {
 
         data.FirstName = _firstName;
         data.LastName = _lastName;
+        data.Profile = _profile;
         data.Phone = _phone;
         data.Email = _email;
         data.EduLevel = _eduLevel;
@@ -197,6 +199,7 @@ public class GameMaster : Singleton<GameMaster> {
 
             _firstName = data.FirstName;
             _lastName = data.LastName;
+            _profile = data.Profile;
             _phone = data.Phone;
             _email = data.Email;
             _eduLevel = data.EduLevel;
@@ -230,26 +233,33 @@ public class GameMaster : Singleton<GameMaster> {
     string companyC,
     string jobA,
     string jobB,
-    string jobC
+    string jobC,
+    string awardA,
+    string awardB,
+    string awardC
     )
     {
-        Debug.Log("RESUME DATA UPDATING...." + " :: NAME: "+firstName);
+        
         _firstName = firstName;
         _lastName = lastName;
+        _profile = profile;
         _phone = phone;
         _email = email;
         _eduLevel = level;
         _highschoolName = higschool;
         _universityName = university;
-        _companyAName = firstName;
-        _companyBName = firstName;
-        _companyCName = firstName;
-        _jobTitleA = firstName;
-        _jobTitleB = firstName;
-        _jobTitleC = firstName;
-        _awardA = firstName;
-        _awardB = firstName;
-        _awardC = firstName;
+        _companyAName = companyA;
+        _companyBName = companyB;
+        _companyCName = companyC;
+        _jobTitleA = jobA;
+        _jobTitleB = jobB;
+        _jobTitleC = jobC;
+        _awardA = awardA;
+        _awardB = awardA;
+        _awardC = awardA;
+
+        Debug.Log("RESUME DATA UPDATING...." + " :: FIRST_NAME: " + firstName);
+        Debug.Log("RESUME DATA UPDATING...." + " :: LAST_NAME: " + lastName);
     }
 
     public void QuitGame() {

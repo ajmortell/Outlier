@@ -7,6 +7,7 @@ using System;
  class PlayerData {
 	public string FirstName;
     public string LastName;
+    public string Profile;
     public string Phone;
 	public string Email;
 	public string EduLevel;

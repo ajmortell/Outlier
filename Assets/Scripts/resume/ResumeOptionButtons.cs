@@ -4,17 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ResumeOptionButtons : MonoBehaviour {
-	public UnityEngine.Canvas canvas;
-	public UnityEngine.UI.Button targetBTN;
+
+    public Canvas canvas;
+	public Button targetBtn;
 	
 	public int numOfOptions;
-	public UnityEngine.UI.Button BTNoption1;
-	public UnityEngine.UI.Button BTNoption2;
-	public UnityEngine.UI.Button BTNoption3;
-	public UnityEngine.UI.Button BTNoption4;
-	public UnityEngine.UI.Button BTNoption5;
-	public UnityEngine.UI.Button BTNoption6;
-	public UnityEngine.UI.Button BTNoption7;
+	public Button optionABtn;
+	public Button optionBBtn;
+	public Button optionCBtn;
+	public Button optionDBtn;
+	public Button optionEBtn;
+	public Button optionFBtn;
+	public Button optionGBtn;
 	
 	// Use this for initialization
 	void Start () 
@@ -26,103 +27,91 @@ public class ResumeOptionButtons : MonoBehaviour {
 				case 0:
 					break;
 				case 1:
-					BTNoption1.onClick.AddListener(op1);
+                optionABtn.onClick.AddListener(OptionA);
 					break;
 				case 2:
-					BTNoption1.onClick.AddListener(op1);
-					BTNoption2.onClick.AddListener(op2);
+                optionABtn.onClick.AddListener(OptionA);
+                optionBBtn.onClick.AddListener(OptionB);
 					break;
 				case 3:
-					BTNoption1.onClick.AddListener(op1);
-					BTNoption2.onClick.AddListener(op2);
-					BTNoption3.onClick.AddListener(op3);
+                optionABtn.onClick.AddListener(OptionA);
+                optionBBtn.onClick.AddListener(OptionB);
+                optionCBtn.onClick.AddListener(OptionC);
 					break;
 				case 4:
-					BTNoption1.onClick.AddListener(op1);
-					BTNoption2.onClick.AddListener(op2);
-					BTNoption3.onClick.AddListener(op3);
-					BTNoption4.onClick.AddListener(op4);
+                optionABtn.onClick.AddListener(OptionA);
+                optionBBtn.onClick.AddListener(OptionB);
+                optionCBtn.onClick.AddListener(OptionC);
+                optionDBtn.onClick.AddListener(OptionD);
 					break;
 				case 5:
-					BTNoption1.onClick.AddListener(op1);
-					BTNoption2.onClick.AddListener(op2);
-					BTNoption3.onClick.AddListener(op3);
-					BTNoption4.onClick.AddListener(op4);
-					BTNoption5.onClick.AddListener(op5);
+                optionABtn.onClick.AddListener(OptionA);
+                optionBBtn.onClick.AddListener(OptionB);
+                optionCBtn.onClick.AddListener(OptionC);
+                optionDBtn.onClick.AddListener(OptionD);
+                optionEBtn.onClick.AddListener(OptionE);
 					break;
 				case 6:
-					BTNoption1.onClick.AddListener(op1);
-					BTNoption2.onClick.AddListener(op2);
-					BTNoption3.onClick.AddListener(op3);
-					BTNoption4.onClick.AddListener(op4);
-					BTNoption5.onClick.AddListener(op5);
-					BTNoption6.onClick.AddListener(op6);
+                optionABtn.onClick.AddListener(OptionA);
+                optionBBtn.onClick.AddListener(OptionB);
+                optionCBtn.onClick.AddListener(OptionC);
+                optionDBtn.onClick.AddListener(OptionD);
+                optionEBtn.onClick.AddListener(OptionE);
+                optionFBtn.onClick.AddListener(OptionF);
 					break;
 				case 7:
-					BTNoption1.onClick.AddListener(op1);
-					BTNoption2.onClick.AddListener(op2);
-					BTNoption3.onClick.AddListener(op3);
-					BTNoption4.onClick.AddListener(op4);
-					BTNoption5.onClick.AddListener(op5);
-					BTNoption6.onClick.AddListener(op6);
-					BTNoption7.onClick.AddListener(op7);
+                optionABtn.onClick.AddListener(OptionA);
+                optionBBtn.onClick.AddListener(OptionB);
+                optionCBtn.onClick.AddListener(OptionC);
+                optionDBtn.onClick.AddListener(OptionD);
+                optionEBtn.onClick.AddListener(OptionE);
+                optionFBtn.onClick.AddListener(OptionF);
+                optionGBtn.onClick.AddListener(OptionG);
 					break;
 				default:
 					Debug.Log("Exceeded max number of options!");
 					break;
 			}
-			BTNoption1.onClick.AddListener(op1);
-			BTNoption2.onClick.AddListener(op2);
-			BTNoption3.onClick.AddListener(op3);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
-	public void ActivateCanvas()
-	{
-		canvas.enabled =true;
-	}
-	public void DeactivateCanvas()
-	{
+
+    public void ActivateCanvas() {
+        canvas.enabled = true;
+    }
+	public void DeactivateCanvas() {
 		canvas.enabled =false;
 	}
 	
-	void op1()
-	{
-		targetBTN.GetComponentInChildren<Text>().text = BTNoption1.GetComponentInChildren<Text>().text;
+	void OptionA() {
+		targetBtn.GetComponentInChildren<Text>().text = optionABtn.GetComponentInChildren<Text>().text;
 		DeactivateCanvas();
 	}
-	void op2()
-	{
-		targetBTN.GetComponentInChildren<Text>().text = BTNoption2.GetComponentInChildren<Text>().text;
+	void OptionB() {
+        targetBtn.GetComponentInChildren<Text>().text = optionBBtn.GetComponentInChildren<Text>().text;
 		DeactivateCanvas();
 	}
-	void op3()
-	{
-		targetBTN.GetComponentInChildren<Text>().text = BTNoption3.GetComponentInChildren<Text>().text;
+
+	void OptionC() {
+        targetBtn.GetComponentInChildren<Text>().text = optionCBtn.GetComponentInChildren<Text>().text;
 		DeactivateCanvas();
 	}
-	void op4()
-	{
-		targetBTN.GetComponentInChildren<Text>().text = BTNoption4.GetComponentInChildren<Text>().text;
+
+	void OptionD() {
+        targetBtn.GetComponentInChildren<Text>().text = optionDBtn.GetComponentInChildren<Text>().text;
 		DeactivateCanvas();
 	}
-	void op5()
-	{
-		targetBTN.GetComponentInChildren<Text>().text = BTNoption5.GetComponentInChildren<Text>().text;
+
+	void OptionE() {
+        targetBtn.GetComponentInChildren<Text>().text = optionEBtn.GetComponentInChildren<Text>().text;
 		DeactivateCanvas();
 	}
-	void op6()
-	{
-		targetBTN.GetComponentInChildren<Text>().text = BTNoption6.GetComponentInChildren<Text>().text;
+
+	void OptionF() {
+        targetBtn.GetComponentInChildren<Text>().text = optionFBtn.GetComponentInChildren<Text>().text;
 		DeactivateCanvas();
 	}
-	void op7()
-	{
-		targetBTN.GetComponentInChildren<Text>().text = BTNoption7.GetComponentInChildren<Text>().text;
+
+	void OptionG() {
+        targetBtn.GetComponentInChildren<Text>().text = optionGBtn.GetComponentInChildren<Text>().text;
 		DeactivateCanvas();
 	}
 }
