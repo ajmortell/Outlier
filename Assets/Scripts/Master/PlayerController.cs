@@ -19,6 +19,9 @@ public class PlayerController : Singleton<PlayerController>
 	public string work1Pos;
 	public string work2Pos;
 	public string work3Pos;
+	public string awardA;
+	public string awardB;
+	public string awardC;
 	
 	public void resumeUpdate 
 	(
@@ -36,7 +39,10 @@ public class PlayerController : Singleton<PlayerController>
 	string w3n,
 	string w1p,
 	string w2p,
-	string w3p
+	string w3p,
+	string awdA,
+	string awdB,
+	string awdC
 	)
 	{
 		updatePlayerFirst(pfirst);
@@ -54,6 +60,9 @@ public class PlayerController : Singleton<PlayerController>
 		updateWorkPos1(w1p);
 		updateWorkPos2(w2p);
 		updateWorkPos3(w3p);
+		updateAwardA(awdA);
+		updateAwardB(awdB);
+		upadteAwardC(awdC);
 		
 	}
 	
@@ -117,6 +126,18 @@ public class PlayerController : Singleton<PlayerController>
 	void updateWorkPos3(string newName)
 	{
 		work3Pos=newName;
+	}
+	void updateAwardA(string newName)
+	{
+		awardA=newName;
+	}
+	void updateAwardB(string newName)
+	{
+		awardB=newName;
+	}
+	void upadteAwardC(string newName)
+	{
+		awardC=newName;
 	}
 	
 	

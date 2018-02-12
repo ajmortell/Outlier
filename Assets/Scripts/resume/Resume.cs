@@ -27,6 +27,10 @@ public class Resume : MonoBehaviour
 	public UnityEngine.UI.Button BTNwrkPos1;
 	public UnityEngine.UI.Button BTNwrkPos2;
 	public UnityEngine.UI.Button BTNwrkPos3;
+	public UnityEngine.UI.Button BTNawardA;
+	public UnityEngine.UI.Button BTNawardB;
+	public UnityEngine.UI.Button BTNawardC;
+	
 	
 	//placeholder vars
 	//store data from fields in these
@@ -46,6 +50,9 @@ public class Resume : MonoBehaviour
 	string wrkPos1;
 	string wrkPos2;
 	string wrkPos3;
+	string awardA;
+	string awardB;
+	string awardC;
 	
 	void Awake()
 	{
@@ -71,6 +78,10 @@ public class Resume : MonoBehaviour
 		wrkPos1 = BTNwrkPos1.GetComponentInChildren<Text>().text;
 		wrkPos2 = BTNwrkPos2.GetComponentInChildren<Text>().text;
 		wrkPos3 = BTNwrkPos3.GetComponentInChildren<Text>().text;
+		awardA = BTNawardA.GetComponentInChildren<Text>().text;
+		awardB = BTNawardB.GetComponentInChildren<Text>().text;
+		awardC = BTNawardC.GetComponentInChildren<Text>().text;
+		
 		
 		//pass the data to the playercontroller
 		playercontroller.resumeUpdate
@@ -89,7 +100,10 @@ public class Resume : MonoBehaviour
 		wrkName3,
 		wrkPos1,
 		wrkPos2,
-		wrkPos3
+		wrkPos3,
+		awardA,
+		awardB,
+		awardC
 		);
 		
 		//exitScene();
