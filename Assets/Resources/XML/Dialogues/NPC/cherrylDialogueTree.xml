@@ -3,19 +3,15 @@
 <CherrylDialogueTree xmlns:xsi="http:www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http:www.w3.org/2001/XMLSchema-instance">
 
   <CherrylBranchNodes>
-    <!--was <NPCNodes>-->
 
-    <DialogueTracker>
-      <BranchTrackerID> 3 </BranchTrackerID>
-      <LieTrackerID> 2 </LieTrackerID>
-    </DialogueTracker>
+    <!--was <NPCNodes>-->
 
     <CherrylBranchNode>
       <!--was <NPCNode>-->
-      
+
       <CherrylBranchNodeId>0</CherrylBranchNodeId>
       <!--was <NPCNodeId>-->
-      
+
       <DialogueNodes>
         <!-- Node 0 -->
         <DialogueNode>
@@ -83,7 +79,7 @@
           <DialogueText>OK. Moving on. These are some interesting awards you have picked up. You recieved three awards?</DialogueText>
 
           <Options>
-            
+
             <DialogueOption>
               <OptionText>Yes</OptionText>
               <DestinationNodeID>4</DestinationNodeID>
@@ -148,12 +144,12 @@
 
           </Options>
         </DialogueNode>
-        
+
       </DialogueNodes>
 
     </CherrylBranchNode>
-    
-    
+
+
     <!-- End Cherryl Branch Node 0  ============================================================================= -->
 
     <CherrylBranchNode>
@@ -295,11 +291,11 @@
         </DialogueNode>
 
       </DialogueNodes>
-      
+
     </CherrylBranchNode>
 
     <!-- End Cherryl Branch Node 1  ============================================================================= -->
-    
+
     <CherrylBranchNode>
     </CherrylBranchNode>
 
@@ -307,32 +303,32 @@
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 3  ============================================================================= -->
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 4  ============================================================================= -->
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 5  ============================================================================= -->
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 6  ============================================================================= -->
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 7  ============================================================================= -->
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 8  ============================================================================= -->
 
     <CherrylBranchNode>
@@ -342,18 +338,18 @@
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 10 ============================================================================= -->
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 11 ============================================================================= -->
 
     <CherrylBranchNode>
     </CherrylBranchNode>
-    
+
     <!-- End Cherryl Branch Node 12 ============================================================================= -->
-    
+
   </CherrylBranchNodes>
 </CherrylDialogueTree>

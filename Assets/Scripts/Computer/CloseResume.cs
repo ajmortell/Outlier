@@ -15,6 +15,7 @@ public class CloseResume : MonoBehaviour {
     void OnYes()
     {
         Debug.Log("Entering Interview Scene");
+        
         GameMaster.Instance.CloseResume();
         ModalPanel.Instance.Refresh();
     }

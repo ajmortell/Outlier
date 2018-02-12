@@ -9,13 +9,13 @@ namespace DialogueTree {
     public class CherrylDialogueTree {
 
         public List<CherrylBranchNode> CherrylBranchNodes;
-        
+  
         public CherrylDialogueTree() {
             CherrylBranchNodes = new List<CherrylBranchNode>();           
         }
         /// <summary>
-        /// holds a list of each branch node the NPC has. 
-        /// then deserializes the actual XML
+        /// Holds a list of each branch node the NPC has 
+        /// then deserializes the actual XML.
         /// </summary>
         public static CherrylDialogueTree LoadDialogue(string path) {
             XmlSerializer xml = new XmlSerializer(typeof(CherrylDialogueTree));

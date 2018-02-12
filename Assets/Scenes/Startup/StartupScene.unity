@@ -1054,7 +1054,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1994071254}
   - component: {fileID: 1994071255}
-  - component: {fileID: 1994071256}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -1088,26 +1087,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3927ce02169b4409143ed7d2d6b284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1994071256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1994071253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35667be9bea819742aaf0485d746cdd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerName: 
-  contactPhone: 
-  contactEmail: 
-  eduLevel: 
-  eduName: 
-  eduStudy: 
-  work1Name: 
-  work2Name: 
-  work3Name: 
-  work1Pos: 
-  work2Pos: 
-  work3Pos: 
+  _firstName: 
+  _lastName: 
+  _phone: 
+  _email: 
+  _eduLevel: 
+  _highschoolName: 
+  _universityName: 
+  _eduStudy: 
+  _companyAName: 
+  _companyBName: 
+  _companyCName: 
+  _jobTitleA: 
+  _jobTitleB: 
+  _jobTitleC: 
+  _awardA: 
+  _awardB: 
+  _awardC: 

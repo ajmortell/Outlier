@@ -44,7 +44,7 @@ public class CherrylDialogue : MonoBehaviour {
         //exit.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(-1); });
         ////NPC
         npc = gameObject;// this script is attached to an NPC
-        npcName = "Cherryl";
+        npcName = npc.name;
         branchID = 0;
         dialoguePanel.SetActive(false);
         RunDialogue();// THIS IS ONLY HERE FOR TEST IT IS WHAT INITIATES THE DIALOGUE. CAN BE CALLED FROM CLASS OBJECT ELSEWHERE
@@ -55,21 +55,20 @@ public class CherrylDialogue : MonoBehaviour {
     }
 
     private IEnumerator InitiateBranchNode(CherrylBranchNode node) {
-
-
-       
+     
         dialoguePanel.SetActive(true);
         int node_id = 0;
 
         while (node_id != -1) { //
             Display_Node(node.DialogueNodes[node_id]);
             selected_option = -2;
-
+           
             while (selected_option == -2) { //      
                 yield return new WaitForSeconds(0.25f);
             }//
             node_id = selected_option;
         }
+
         dialoguePanel.SetActive(false);
         UnSelectedNPC();
     }
@@ -80,14 +79,15 @@ public class CherrylDialogue : MonoBehaviour {
 
     private void Display_Node(DialogueNode node) {
 
+        
         node_text.GetComponent<Text>().text = node.DialogueText;
-        string newString = node_text.GetComponent<Text>().text.Replace("[NPC_NAME]", npcName).Replace("[PLAYER_FIRSTNAME]", "Adam").Replace("[PLAYER_LASTNAME]", "Mortell").Replace("[UNIVERSITY_NAME]", "STFU");
+        string newString = node_text.GetComponent<Text>().text.Replace("[NPC_NAME]", npcName).Replace("[PLAYER_FIRSTNAME]", GameMaster.Instance._firstName).Replace("[PLAYER_LASTNAME]", GameMaster.Instance._firstName).Replace("[UNIVERSITY_NAME]", GameMaster.Instance._universityName);
         node_text.GetComponent<Text>().text = newString;
 
         option_1.SetActive(false);
         option_2.SetActive(false);
         option_3.SetActive(false);
-
+        
         for (int i = 0; i < node.Options.Count || i < 1; i++) {
             switch (i) {
                 case 0:
