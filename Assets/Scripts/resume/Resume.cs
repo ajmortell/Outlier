@@ -64,7 +64,7 @@ public class Resume : MonoBehaviour
 		eduLevel= BTNeduLevel.GetComponentInChildren<Text>().text;
 		eduHName = IFeduHName.text;
 		eduUName = IFeduUName.text;
-		eduStudy = BTNeduLevel.GetComponentInChildren<Text>().text;
+		eduStudy = BTNeduStudy.GetComponentInChildren<Text>().text;
 		wrkName1 = IFwrkName1.text;
 		wrkName2 = IFwrkName2.text;
 		wrkName3 = IFwrkName3.text;

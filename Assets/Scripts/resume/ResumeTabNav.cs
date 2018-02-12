@@ -10,10 +10,12 @@ public class ResumeTabNav : MonoBehaviour
 	public List<UnityEngine.UI.InputField> fields = new List<UnityEngine.UI.InputField>();
 	public int index = 500; //start index at something higher than list count so the first tab will jump to the first field
 	public GameObject textObject;
+	
     void Start()
     {
-        system = EventSystem.current;// EventSystemManager.currentSystem;
+        //system = EventSystem.current;// EventSystemManager.currentSystem;
     }
+	
     // Update is called once per frame
     void Update()
     {
