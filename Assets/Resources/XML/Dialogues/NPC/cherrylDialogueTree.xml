@@ -16,25 +16,51 @@
         <!-- Node 0 -->
         <DialogueNode>
           <DialogueNodeID>0</DialogueNodeID>
-          <DialogueText>Hi thank you for coming in to Business and Business. You're last name is... [PLAYER_LASTNAME] correct? [PLAYER_FIRSTNAME] [PLAYER_LASTNAME]?</DialogueText>
+          <DialogueText>Hi thank you for coming in to Business and Business. You're... [PLAYER_FIRSTNAME] right? [PLAYER_FIRSTNAME] [PLAYER_LASTNAME]?</DialogueText>
           <Options>
+            
             <DialogueOption>
-              <OptionText>Yes.</OptionText>
+              <OptionText>Yes hello I am [PLAYER_FIRSTNAME] [PLAYER_LASTNAME].</OptionText>
               <DestinationNodeID>1</DestinationNodeID>
-              <Face>1</Face>
+              <Face>0</Face>
             </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>Yup [PLAYER_FIRSTNAME] [PLAYER_LASTNAME]. That's me.</OptionText>
+              <DestinationNodeID>1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>[PLAYER_FIRSTNAME] [PLAYER_LASTNAME]. That is who I am.</OptionText>
+              <DestinationNodeID>1</DestinationNodeID>
+              <Face>0</Face>
+            </DialogueOption>
+            
           </Options>
         </DialogueNode>
 
         <!-- Node 1 -->
         <DialogueNode>
           <DialogueNodeID>1</DialogueNodeID>
-          <DialogueText>Do you have proper I.D.? I need to make a photocopy for records.</DialogueText>
-
+          <DialogueText>Great..My name is [NPC_NAME]. I will be conducting your interview.</DialogueText>
+<!-- need to add an <AnimationID> field to tell the animator to change the animation state based on what she is saying. Example: if "Thinking" animState = LookLeft-->
           <Options>
 
             <DialogueOption>
-              <OptionText>The funniest thing. This is going to sound crazy but on my way in here a man stole my wallet and I need a new license..</OptionText>
+              <OptionText>Nice to meet you [NPC_NAME]!</OptionText>
+              <DestinationNodeID>2</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>Great!</OptionText>
+              <DestinationNodeID>2</DestinationNodeID>
+              <Face>1</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>Hi [NPC_NAME]</OptionText>
               <DestinationNodeID>2</DestinationNodeID>
               <Face>1</Face>
             </DialogueOption>
@@ -46,29 +72,22 @@
 
         <DialogueNode>
           <DialogueNodeID>2</DialogueNodeID>
-          <DialogueText>This is highly unorthodox [PLAYER_FIRSTNAME]. We will need you to get the license for us.</DialogueText>
+          <DialogueText>OK so! Oh! Would you like something to drink? A bottle of water?</DialogueText>
 
-          <!-- this is a lie that will lead into a tree of lies like a quest. The quest ends when they finally give in. 7 lies in  -->
           <Options>
 
             <DialogueOption>
-              <OptionText>Will do [NPC_NAME].</OptionText>
+              <OptionText>A bottle of water would be great [NPC_NAME].</OptionText>
               <DestinationNodeID>3</DestinationNodeID>
               <Face>2</Face>
             </DialogueOption>
 
             <DialogueOption>
-              <OptionText>Their chess program is superb.</OptionText>
-              <DestinationNodeID>3</DestinationNodeID>
+              <OptionText>No thank you [NPC_NAME].</OptionText>
+              <DestinationNodeID>4</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>Absolutely tell him about their .</OptionText>
-              <DestinationNodeID>3</DestinationNodeID>
-              <Face>1</Face>
-            </DialogueOption>
-
+<!--IF YES WE CAN MAKE HER LEAVE GIVING THE PLAYER TIME ALONE FOR SHENNANIGANS-->
           </Options>
         </DialogueNode>
 
@@ -76,16 +95,28 @@
 
         <DialogueNode>
           <DialogueNodeID>3</DialogueNodeID>
-          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. You recieved three awards?</DialogueText>
+          <DialogueText>Here you are. Nice and cold!</DialogueText>
 
           <Options>
 
             <DialogueOption>
-              <OptionText>Yes</OptionText>
+              <OptionText>Thank you [NPC_NAME].</OptionText>
               <DestinationNodeID>4</DestinationNodeID>
               <Face>2</Face>
             </DialogueOption>
 
+            <DialogueOption>
+              <OptionText>Just the way I like it [NPC_NAME].</OptionText>
+              <DestinationNodeID>4</DestinationNodeID>
+              <Face>2</Face>
+            </DialogueOption>
+
+            <DialogueOption>
+              <OptionText>Cool thanks [NPC_NAME].</OptionText>
+              <DestinationNodeID>4</DestinationNodeID>
+              <Face>2</Face>
+            </DialogueOption>
+            
           </Options>
         </DialogueNode>
 
@@ -93,25 +124,13 @@
 
         <DialogueNode>
           <DialogueNodeID>4</DialogueNodeID>
-          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
+          <DialogueText>OK! Lets get started shall we? We are holding this interview for the [TITLE] position here at Business and Business. Your profile is a perfect match for the position.</DialogueText>
 
           <Options>
 
             <DialogueOption>
-              <OptionText>I won this.</OptionText>
+              <OptionText>OK!</OptionText>
               <DestinationNodeID>5</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>I don't think I have any.</OptionText>
-              <DestinationNodeID>6</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>My weakness is my sweet style.</OptionText>
-              <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
 
@@ -120,24 +139,24 @@
 
         <DialogueNode>
           <DialogueNodeID>5</DialogueNodeID>
-          <DialogueText>[PLAYER_FIRSTNAME], What is your greatest weakness?</DialogueText>
+          <DialogueText> So [PLAYER_FIRSTNAME], Tell me about yourself.</DialogueText>
 
           <Options>
 
             <DialogueOption>
-              <OptionText>I don't think I have any.</OptionText>
+              <OptionText>Well I come from a long line of straw salesman. My family cultivated the first straw factories in the land. I devided I wanted to do something different with my life. I want to be in the [TITLE] business.</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
 
             <DialogueOption>
-              <OptionText>My weakness is my sweet style</OptionText>
+              <OptionText>I was raised in syria though I am a citizen of this country. My parents were war heroes. They wanted me to have a different life so they sent me to school to be a [TITLE]</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
 
             <DialogueOption>
-              <OptionText>....</OptionText>
+              <OptionText>I spent most of my life in the varrious wars of my generation. Once I fot out I had to learn to live a normal life and find out who I was and what I wanted to be. After a great soul search I realized that a [TITLE] is what I wanted to be.</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
@@ -202,18 +221,6 @@
               <Face>2</Face>
             </DialogueOption>
 
-            <DialogueOption>
-              <OptionText>Their chess program is superb.</OptionText>
-              <DestinationNodeID>3</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>Absolutely tell him about their .</OptionText>
-              <DestinationNodeID>3</DestinationNodeID>
-              <Face>1</Face>
-            </DialogueOption>
-
           </Options>
         </DialogueNode>
 
@@ -221,12 +228,12 @@
 
         <DialogueNode>
           <DialogueNodeID>3</DialogueNodeID>
-          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. You recieved three awards?</DialogueText>
+          <DialogueText>I was made by Ryan Frances and later remade by Adam Morteel as a sprite. Ryan's was better.</DialogueText>
 
           <Options>
 
             <DialogueOption>
-              <OptionText>Yes</OptionText>
+              <OptionText>Uhh. Are you talking to me in a fourth wall right now?</OptionText>
               <DestinationNodeID>4</DestinationNodeID>
               <Face>2</Face>
             </DialogueOption>
@@ -238,25 +245,13 @@
 
         <DialogueNode>
           <DialogueNodeID>4</DialogueNodeID>
-          <DialogueText>OK. Moving on. These are some interesting awards you have picked up. Tell me about [AWARD_A].</DialogueText>
+          <DialogueText>Oh totally [PLAYER_FIRSTNAME].I mean they are two different styles but Ryan's was the real deal.</DialogueText>
 
           <Options>
 
             <DialogueOption>
-              <OptionText>I won this.</OptionText>
+              <OptionText>Are you self aware?</OptionText>
               <DestinationNodeID>5</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>I don't think I have any.</OptionText>
-              <DestinationNodeID>6</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>My weakness is my sweet style.</OptionText>
-              <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
 
@@ -265,24 +260,12 @@
 
         <DialogueNode>
           <DialogueNodeID>5</DialogueNodeID>
-          <DialogueText>[PLAYER_FIRSTNAME], What is your greatest weakness?</DialogueText>
+          <DialogueText>Yeah it's like, Adam's is fit to some kind of expected indie style. Ryan's is the art that makes that happen.</DialogueText>
 
           <Options>
 
             <DialogueOption>
-              <OptionText>I don't think I have any.</OptionText>
-              <DestinationNodeID>-1</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>My weakness is my sweet style</OptionText>
-              <DestinationNodeID>-1</DestinationNodeID>
-              <Face>0</Face>
-            </DialogueOption>
-
-            <DialogueOption>
-              <OptionText>....</OptionText>
+              <OptionText>Dude. I'm Adam. You are talking about me. I did this... Well this is all we had time for. Thank you and good night Chicago! -fin</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartGame : MonoBehaviour {
+public class ContinueGame : MonoBehaviour {
 
     public void OnButtonPress() {
-        GameMaster.Instance.ChangeState(3);
+        GameMaster.Instance.Load();
+        GameMaster.Instance.ChangeState(4);
     }
 }

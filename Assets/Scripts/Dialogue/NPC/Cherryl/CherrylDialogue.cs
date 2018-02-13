@@ -102,7 +102,7 @@ public class CherrylDialogue : MonoBehaviour {
     private void Set_Option_Button(GameObject button, DialogueOption option) {
         button.SetActive(true);// sets sent btn ON
         button.GetComponentInChildren<Text>().text = option.OptionText;// fills text with xml option txt
-        string newString = button.GetComponentInChildren<Text>().text.Replace("[PLAYER_FIRSTNAME]", "Adam Mortell").Replace("[NPC_NAME]", npcName);
+        string newString = button.GetComponentInChildren<Text>().text.Replace("[NPC_NAME]", npcName).Replace("[PLAYER_FIRSTNAME]", GameMaster.Instance._firstName).Replace("[PLAYER_LASTNAME]", GameMaster.Instance._lastName).Replace("[UNIVERSITY_NAME]", GameMaster.Instance._universityName);
         button.GetComponentInChildren<Text>().text = newString;
 
         button.GetComponent<Button>().onClick.AddListener(delegate { SetSelectedOption(option.DestinationNodeID); });

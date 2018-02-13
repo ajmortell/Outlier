@@ -268,12 +268,11 @@ public class GameMaster : Singleton<GameMaster> {
 
     public void CloseResume() {
         gameState = GameState.MEETING;
-        Save();
     }
 
     void OnGUI() {
-        GUI.Label(new Rect(320, 10, 150, 30), "Name: " + _firstName+" "+_lastName);
-        GUI.Label(new Rect(100, 10, 150, 30), "University: " + _universityName);
+        //GUI.Label(new Rect(320, 10, 150, 30), "Name: " + _firstName+" "+_lastName);
+        //GUI.Label(new Rect(100, 10, 150, 30), "University: " + _universityName);
     }
 
     void Update() {
