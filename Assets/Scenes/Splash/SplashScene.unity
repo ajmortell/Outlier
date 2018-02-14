@@ -165,7 +165,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 540
+  orthographic size: 540.0002
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -537,7 +537,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 31076256}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0

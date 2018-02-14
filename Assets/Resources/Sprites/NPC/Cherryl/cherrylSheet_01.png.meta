@@ -4,15 +4,17 @@ timeCreated: 1518220434
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cherrylSheet_01_0
-    21300002: cherrylSheet_01_1
+    21300000: cherrylHandUpLookLeft
+    21300002: cherrylHandup
     21300004: cherrylIdle_01
-    21300006: cherrylSheet_01_3
+    21300006: cherrylLookLeftHandsDown
     21300008: cherrylIdle_02
-    21300010: cherrylSheet_01_2
-    21300012: cherrylSheet_01_4
-    21300014: cherrylSheet_01_5
-    21300016: cherrylSheet_01_6
+    21300010: cherrylIdle_01
+    21300012: cherrylHandUpBlink
+    21300014: cherrylHandsDownTalk
+    21300016: cherrylIdle_02
+    21300018: cherrylHandUpTalk
+    21300020: cherrylHandsDownTalkBlink
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -129,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cherrylSheet_01_0
+      name: cherrylHandUpLookLeft
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1536
-        width: 512
-        height: 512
+        x: 40
+        y: 768
+        width: 152
+        height: 220
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,13 +145,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: cherrylSheet_01_1
+      name: cherrylHandup
       rect:
         serializedVersion: 2
-        x: 520
-        y: 1536
-        width: 512
-        height: 512
+        x: 300
+        y: 768
+        width: 152
+        height: 220
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +162,10 @@ TextureImporter:
       name: cherrylIdle_01
       rect:
         serializedVersion: 2
-        x: 1040
-        y: 1536
-        width: 512
-        height: 512
+        x: 596
+        y: 768
+        width: 116
+        height: 220
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,13 +173,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: cherrylSheet_01_3
+      name: cherrylLookLeftHandsDown
       rect:
         serializedVersion: 2
-        x: 1040
-        y: 496
-        width: 512
-        height: 512
+        x: 76
+        y: 508
+        width: 116
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cherrylHandUpBlink
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 508
+        width: 152
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cherrylHandsDownTalk
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 508
+        width: 116
+        height: 220
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +218,10 @@ TextureImporter:
       name: cherrylIdle_02
       rect:
         serializedVersion: 2
-        x: 0
-        y: 496
-        width: 512
-        height: 512
+        x: 76
+        y: 248
+        width: 116
+        height: 220
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,57 +229,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: cherrylSheet_01_2
+      name: cherrylHandUpTalk
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1016
-        width: 512
-        height: 512
+        x: 298
+        y: 249
+        width: 152
+        height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: cherrylSheet_01_4
+      name: cherrylHandsDownTalkBlink
       rect:
         serializedVersion: 2
-        x: 520
-        y: 1016
-        width: 512
-        height: 512
+        x: 596
+        y: 248
+        width: 116
+        height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cherrylSheet_01_5
-      rect:
-        serializedVersion: 2
-        x: 520
-        y: 496
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cherrylSheet_01_6
-      rect:
-        serializedVersion: 2
-        x: 1040
-        y: 1016
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

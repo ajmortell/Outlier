@@ -70,6 +70,7 @@ public class CherrylDialogue : MonoBehaviour {
     }
 
     private void UnSelectedNPC() {
+        Debug.Log("SELECTED NPC: "+ selected_npc);
         selected_npc = -1;
     }
 
