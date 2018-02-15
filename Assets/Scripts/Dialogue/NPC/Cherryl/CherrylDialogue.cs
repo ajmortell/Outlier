@@ -50,6 +50,12 @@ public class CherrylDialogue : MonoBehaviour {
         StartCoroutine(InitiateBranchNode(dialogue_tree.CherrylBranchNodes[branchID]));
     }
 
+    //public int RetrieveBranchID()
+    //{
+        
+    //    return
+    //}
+
     private IEnumerator InitiateBranchNode(CherrylBranchNode node) {
      
         dialoguePanel.SetActive(true);

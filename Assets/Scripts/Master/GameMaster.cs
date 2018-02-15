@@ -48,18 +48,16 @@ public class GameMaster : Singleton<GameMaster> {
         StartCoroutine(Splash());
     }
 
-    IEnumerator Splash()
-    {
+    IEnumerator Splash() {
         yield return new WaitForSeconds(1.5f);
-
+        // Load data here if needed before splash
         yield return new WaitForSeconds(1.5f);
         gameState = GameState.SPLASH;
         StartCoroutine(TransitionScene(1));
         //SoundManager.Instance.PlayMusic(sound.SplashClip_A);
     }
 
-    private void Cut()
-    {
+    private void Cut() {
         StartCoroutine(TransitionScene(2));
     }
 
@@ -93,8 +91,8 @@ public class GameMaster : Singleton<GameMaster> {
 
     IEnumerator TransitionScene(int scene)
     {
-        //float fadeTime = GetComponent<SceneFading>().BeginFade(1);
-        //yield return new WaitForSeconds(fadeTime);
+        float fadeTime = GetComponent<SceneFading>().BeginFade(1);
+        yield return new WaitForSeconds(fadeTime);
         yield return new WaitForSeconds(0.75f);
         SceneManager.LoadScene(scene);
     }

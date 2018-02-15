@@ -150,13 +150,13 @@
             </DialogueOption>
 
             <DialogueOption>
-              <OptionText>I was raised in syria though I am a citizen of this country. My parents were war heroes. They wanted me to have a different life so they sent me to school to be a [TITLE]</OptionText>
+              <OptionText>I was raised in Syria though I am a citizen of this country. My parents were war heroes. They wanted me to have a different life so they sent me to school to be a [TITLE].</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
 
             <DialogueOption>
-              <OptionText>I spent most of my life in the varrious wars of my generation. Once I fot out I had to learn to live a normal life and find out who I was and what I wanted to be. After a great soul search I realized that a [TITLE] is what I wanted to be.</OptionText>
+              <OptionText>I spent most of my life in the various wars of my generation. Once I got out of the military I had to learn to live a normal life and find out who I was and what I wanted out of life. After a great soul search I realized that a [TITLE] is what I wanted to be.</OptionText>
               <DestinationNodeID>-1</DestinationNodeID>
               <Face>0</Face>
             </DialogueOption>
